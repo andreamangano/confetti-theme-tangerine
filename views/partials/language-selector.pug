@@ -1,0 +1,22 @@
+mixin language-selector(languages)
+
+  .language-selector
+
+    .language-selector__content
+
+      ul.language-selector__list
+
+        - var i = 0;
+
+        each language in languages.versions
+
+          - var activeClass = language.active ? 'active' : '';
+
+          if i == 0
+            li.language-selector__item(class=activeClass)
+              a.language-selector__link(href="/")= language.label
+          else
+            li.language-selector__item(class=activeClass)
+              a.language-selector__link(href=language.code + ".html")= language.label
+
+          - i++

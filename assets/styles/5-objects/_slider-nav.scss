@@ -1,0 +1,43 @@
+// Slider Nav
+//------------------------------------------------------------------------------
+.slider-nav {
+  background-color: $color-neutral-highest;
+  color: $color-neutral-lowest;
+
+  &__content {
+    @include grid-row();
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: flex;
+    padding: $baseline / 2 $column-gutter;
+    font-weight: 600;
+    text-transform: uppercase;
+    align-items: center;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &--prev {
+      &::before {
+        margin-top: em-calc(-1);
+        font-size: 220%;
+        content:'\22B6';
+      }
+    }
+
+    &--next {
+      &::after {
+        margin-top: em-calc(-1);
+        font-size: 220%;
+        content:'\22B7';
+      }
+    }
+
+    &--overview {
+
+    }
+  }
+}

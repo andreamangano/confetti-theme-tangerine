@@ -1,0 +1,17 @@
+mixin author-preview(author)
+
+  .author-preview
+
+
+    if author.picture
+      .author-preview__picture
+
+        img.author-preview__picture-image(
+          src=author.picture
+        )
+
+      //- TODO: if author has the website link add it
+      h4.author-preview__name!= author.name
+
+      if author.role
+        .author-preview__role!= author.role

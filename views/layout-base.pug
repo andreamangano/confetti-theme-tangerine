@@ -1,0 +1,47 @@
+doctype html
+
+html(lang=info.lang.code)
+
+  head
+
+    //- Block title
+    //-------------
+    block meta_title
+      title!= info.title
+
+    //- Description
+    //-------------
+    if info.description
+      meta(name="description" content=info.description)
+
+    //- Viewport settings
+    //-------------------
+    meta(
+      name="viewport"
+      content="width=device-width"
+    )
+
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+    base(href="/")
+    link(href="/styles/style.css" rel="stylesheet" type="text/css")
+
+    // TODO: add tags to share on socials
+
+  body
+
+    include ./partials/mixins
+
+    //- Block page
+    //------------
+    block page
+
+
+    //- Block for JS includes
+    //-----------------------
+    block js_includes
+
+    //- Block for inline JS
+    //---------------------
+    block js_inline

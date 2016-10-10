@@ -1,0 +1,127 @@
+// Table of contents
+.table-contents {
+
+  &__header {
+    @include grid-row(false);
+    color: $color-neutral-lowest;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-small;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    display: flex;
+    letter-spacing: 1px;
+  }
+
+  &__counter {
+    opacity: .7;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-left: $column-gutter;
+  }
+
+  &__counter-icon {
+    @include svg-embed(slides, $color-neutral-lowest);
+    height: 1em;
+    width: 1em;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__preview-mode-button,
+  &__list-mode-button {
+    height: 1em;
+    width: 1em;
+    cursor: pointer;
+    opacity: .7;
+    margin-left: $column-gutter / 2;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__list-mode-button {
+    @include svg-embed(listMode, $color-neutral-lowest);
+  }
+
+  &__preview-mode-button {
+    @include svg-embed(previewMode, $color-neutral-lowest);
+  }
+
+  &__counter-label {
+    margin-left: rem-calc(4);
+    display: flex;
+    align-items: baseline;
+    font-size: 80%;
+  }
+
+  &__counter-number {
+    font-weight: bold;
+    margin-right: rem-calc(4);
+    font-size: 120%;
+  }
+
+  &__list {
+    background-color: $color-neutral-lowest;
+    max-width: $text-wrapper;
+    margin-top: $baseline;
+    overflow: hidden;
+
+    border-radius: 3px;
+    box-shadow: 0 rem-calc(25) rem-calc(20) 0 rgba($color-neutral-highest, .2);
+  }
+
+  &__item {
+    border-top: 1px solid $color-neutral-low;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  &__item-link {
+    @include grid-row(false);
+    @extend %p;
+    cursor: pointer;
+    font-size: $font-size-smaller;
+    align-items: center;
+    padding: $baseline * .75 $column-gutter;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 rem-calc(10) 0 rgba($color-neutral-medium-high, .5);
+    }
+  }
+
+  &__item-number {
+    color: $color-neutral-highest;
+    font-weight: bold;
+    width: rem-calc(35);
+  }
+
+  &__item-image {
+    width: rem-calc(70);
+    background-color: $color-neutral-low;
+    display: block;
+    margin-right: $column-gutter / 2;
+    display: none;
+  }
+
+  &__item-label {
+    color: $color-neutral-medium-high;
+  }
+
+  &__item-link:hover &__label {
+    color: $color-primary;
+  }
+
+  &__list.is-extended &__image {
+    display: none;
+  }
+}

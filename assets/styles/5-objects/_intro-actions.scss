@@ -1,0 +1,55 @@
+.intro-actions {
+
+  &__list {
+    @include grid-row(false);
+  }
+
+  &__item {
+    @include grid-column((xxsmall: 6, small: 3), true);
+  }
+
+  &__button {
+    padding: $baseline * .75 $column-gutter / 2;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    align-items: center;
+    font-weight: bold;
+    color: $color-neutral-medium;
+    line-height: 1;
+    cursor: pointer;
+
+    &:not(&--start):hover {
+      text-decoration: underline;
+    }
+
+    &--start {
+      border-bottom-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  &__button-icon {
+    height: 1.4em;
+    width: 1.4em;
+    margin-right: $column-gutter / 2;
+  }
+
+  &__button--start &__button-icon {
+    @include svg-embed(start, $color-primary);
+  }
+
+  &__button--demo &__button-icon {
+    @include svg-embed(demo, $color-neutral-medium);
+  }
+
+  &__button--material &__button-icon {
+    @include svg-embed(material, $color-neutral-medium);
+  }
+
+  &__button--share &__button-icon {
+    @include svg-embed(share, $color-neutral-medium);
+  }
+}

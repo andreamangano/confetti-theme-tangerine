@@ -1,0 +1,88 @@
+// Hero
+//-----
+.hero {
+  background-color: $color-neutral-lowest;
+  padding: $baseline * 1.5 0 $baseline * 5.5;
+  position: relative;
+  text-align: center;
+
+  &__content {
+    margin: 0 auto;
+    max-width: $page-wrapper;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__cover {
+    margin-top: $column-gutter * 2;
+    box-shadow: 0 rem-calc(15) rem-calc(30) 0 rgba($color-neutral-highest, .2);
+  }
+
+  &__cover-link {
+    display: block;
+  }
+
+  &__cover-image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @extend %h1;
+    font-weight: bold;
+    margin-top: $baseline * 1.5;
+  }
+
+  &__subtitle {
+    @extend %h2;
+    margin-top: $baseline / 2;
+    color: $color-neutral-medium-high;
+    font-weight: normal;
+  }
+
+  &__details {
+    @extend %p-smaller;
+    @include grid-row(false);
+    color: $color-neutral-medium;
+    margin-top: $baseline / 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__categories {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 80%;
+  }
+
+  &__category {
+    margin: 0 $column-gutter / 2;
+    font-weight: bold;
+  }
+
+  &__cover + &__description {
+    border: none;
+    padding-top: 0;
+  }
+
+  &__description {
+    margin-top: $baseline * 5;
+  }
+
+  &__description-content {
+    max-width: $text-wrapper;
+    margin: 0 auto;
+    @extend %p-le;
+    text-align: left;
+
+    p {
+      margin-top: $baseline;
+    }
+  }
+
+  &__actions {
+    max-width: $text-wrapper;
+    margin: $baseline * 1.5 auto 0;
+  }
+}

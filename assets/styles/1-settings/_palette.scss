@@ -1,0 +1,14 @@
+
+
+$colors: map-get(getThemeConfig(), 'colors');
+$color-primary: map-get($colors, 'primary');
+
+$color-neutral-lowest: #fff;
+$color-neutral-lower: #eff2f7;
+$color-neutral-low: #e0e6ed;
+$color-neutral-medium-low: #dde5eb;
+$color-neutral-medium: #bec6cc;
+$color-neutral-medium-high: #a6aeb3;
+$color-neutral-high: #3c4858;
+$color-neutral-higher: #273444;
+$color-neutral-highest: #4a4a4a;

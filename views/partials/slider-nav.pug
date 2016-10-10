@@ -1,0 +1,27 @@
+mixin slider-nav(nav)
+  .slider-nav
+
+    .slider-nav__content
+
+      //- Previous button
+      //-----------------
+      if nav.prev
+        a.slider-nav__button.slider-nav__button--prev(
+          href=nav.prev.url
+          title=translations.previous
+        )= translations.previous
+
+      //- Overview button
+      //-----------------
+      a.slider-nav__button.slider-nav__button--overview(
+        href=nav.overview
+        title=translations.overview
+      )= translations.overview
+
+      //- Next button
+      //-------------
+      if nav.next
+        a.slider-nav__button.slider-nav__button--next(
+          href=nav.next.url
+          title=translations.next
+        )= translations.next

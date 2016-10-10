@@ -1,0 +1,14 @@
+mixin navigation(navigation, hasIndex)
+
+  nav.nav
+    .nav__content
+
+      ul.nav__list
+
+        if hasIndex
+          li.nav__item
+            a.nav__link(href="/")= translation.tableOfContents
+
+        each item in navigation
+          li.nav__item
+            a.nav__link(href="#{item.page}")= item.label

@@ -1,0 +1,36 @@
+// Slide
+//------------------------------------------------------------------------------
+.slide {
+
+  &__title {
+    @extend %h2;
+    display: none;
+    text-align: center;
+  }
+
+  // &__state {}
+
+  &__img {
+    display: block;
+    margin-top: $baseline;
+    width: 100%;
+    box-shadow: 0 0 2px 2px rgba($color-neutral-highest,.15);
+  }
+
+  &__description {
+    margin: 0 auto;
+    max-width: $text-wrapper;
+    padding: $baseline $column-gutter $baseline * 2;
+
+    p,
+    ul {
+      @extend %p-le;
+      margin-top: $baseline / 2;
+    }
+
+    ul {
+      border-left: 2px solid $color-neutral-low;
+      padding-left: $column-gutter / 2;
+    }
+  }
+}

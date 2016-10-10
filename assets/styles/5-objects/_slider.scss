@@ -1,0 +1,19 @@
+// Slider
+//------------------------------------------------------------------------------
+.slider {
+
+  &__content {
+    margin: 0 auto;
+    max-width: $slide-wrapper;
+    padding: $baseline * 2 0;
+  }
+
+  &__nav {
+    background-color: $color-neutral-highest;
+  }
+
+  &__nav-content {
+    margin: 0 auto;
+    max-width: $slide-wrapper;
+  }
+}

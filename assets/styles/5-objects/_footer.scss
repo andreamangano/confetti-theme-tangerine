@@ -1,0 +1,46 @@
+.footer {
+  padding: $baseline * 2.5 $column-gutter;
+  color: currentColor;
+
+  &__wrapper {
+    max-width: $page-wrapper;
+    margin: 0 auto;
+  }
+
+  &__info {
+    @include grid-row(false);
+    justify-content: space-between;
+  }
+
+  &__generator {
+
+  }
+
+  &__author {
+
+  }
+
+  &__link {
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0 1px $color-primary;
+
+    &::after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 1px;
+      height: 1px;
+      background-color: $color-neutral-lowest;
+      display: block;
+      z-index: 0;
+    }
+  }
+
+  &__linkLabel {
+    position: relative;
+    z-index: 1;
+  }
+}

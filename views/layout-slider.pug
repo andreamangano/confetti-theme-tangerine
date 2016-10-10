@@ -1,0 +1,25 @@
+extends layout-base
+
+block meta_title
+  title!= slide.title + ' | ' + info.title
+
+block page
+
+  .slider-page
+
+    // Action Bar
+    //-----------
+    .slider__actionbar
+
+      +slider-nav(sliderNav)
+
+      // TODOS
+      // Link to slides overview
+      // Link to table of contents
+      // Link to the next slide
+      // Link to the previous slide
+      // Link to share
+
+    .slider-page__slide
+
+      block slide

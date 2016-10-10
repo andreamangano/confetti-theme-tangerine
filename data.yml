@@ -1,0 +1,24 @@
+name: Tangerine
+
+templateEngine: pug
+styleCompiler: sass
+
+# Theme config
+config:
+
+  # Ratio of a single slide cover
+  slideRatio:
+    width: 16
+    height: 9
+
+  # Slides formats
+  slideFormats:
+    large:
+      width: 1000
+    preview:
+      width: 200
+
+  # Colours palette
+  # You can customize it
+  colors:
+    primary: '#fe5619'

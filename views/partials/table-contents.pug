@@ -1,0 +1,30 @@
+mixin table-contents(slides)
+
+  - var slidesTranslations = slides.length > 1 ? translations.slides : translations.slide
+
+  .table-contents
+
+    .table-contents__header
+
+      h3.table-contents__title= translations.tableOfContents
+
+        .table-contents__counter
+          .table-contents__counter-icon
+            .icon-slides
+          .table-contents__counter-label
+            .table-contents__counter-number=slides.length
+            =slidesTranslations
+
+      .table-contents__actions
+        .table-contents__list-mode-button.is-active
+        .table-contents__preview-mode-button
+
+
+    ul.table-contents__list
+
+      each slide, index in slides
+        li.table-contents__item
+          a.table-contents__item-link(href=slide.url)
+            .table-contents__item-number= index + 1
+            img.table-contents__item-image(src="http://www.placehold.it/100x56")
+            h4.table-contents__item-label= slide.title

@@ -1,0 +1,16 @@
+$baseline: rem-calc(20);
+$page-wrapper: rem-calc(1100);
+$slide-wrapper: rem-calc(1100);
+$text-wrapper: rem-calc(730);
+
+$font-size-bigger: $baseline * 2; // h1
+$font-size-big: rem-calc(26); // h2
+$font-size-medium: rem-calc(18); // h3
+$font-size-small: rem-calc(16); // h4
+$font-size-smaller: rem-calc(14); // h5
+$font-size-smallest: rem-calc(12);
+
+
+// TODO: spostare in component  var
+$secondary-nav-item-height: $baseline * 3;
+

@@ -1,0 +1,28 @@
+html,
+body {
+  background-color: $color-neutral-lowest;
+  //background-color: $color-neutral-lowest;
+  color: $color-neutral-highest;
+  font-family: $base-font-family;
+  font-size: 9px;
+  height: 100%;
+  overflow: auto;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+
+  @include media-query(xxsmall) {
+    font-size: 10px;
+  }
+
+  @include media-query(small) {
+    font-size: 12px;
+  }
+
+  @include media-query(large) {
+    font-size: 13px;
+  }
+
+  @include media-query(huge) {
+    font-size: 14px;
+  }
+}

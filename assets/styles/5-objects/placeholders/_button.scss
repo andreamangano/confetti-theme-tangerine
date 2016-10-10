@@ -1,0 +1,55 @@
+//------------------------------------------------------------------------------
+//- BUTTON PLACEHOLDERS
+//------------------------------------------------------------------------------
+
+%button {
+  align-items: center;
+  align-self: baseline;
+  background-color: $color-primary;
+  border-radius: 3px;
+  color: $color-neutral-lowest;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: $baseline;
+  font-weight: 600;
+  height: $baseline * 2.5;
+  justify-content: center;
+  padding: 0 $column-gutter * 1.5;
+  text-transform: uppercase;
+  transition: background-color $duration / 2;
+  user-select: none;
+  width: auto;
+  will-change: background-color;
+
+  &:hover {
+  }
+}
+
+//------------------------------------------------------------------------------
+//- Sizes
+//------------------------------------------------------------------------------
+
+//- Small
+//------------------------------------------------------------------------------
+%button-small {
+  font-size: $baseline * .75;
+  font-weight: 600;
+  height: $baseline * 2;
+  padding: $baseline * .4 $column-gutter;
+}
+
+//- Huge
+//------------------------------------------------------------------------------
+%button-huge {
+  font-size: $baseline * 1.25;
+  font-weight: 600;
+  height: $baseline * 3;
+  padding: $baseline * .8 $column-gutter * 2;
+}
+
+//- Expanded
+//------------------------------------------------------------------------------
+%button-expanded {
+  display: block;
+  width: 100%;
+}

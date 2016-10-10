@@ -1,0 +1,128 @@
+extends layout-base
+
+block page
+
+  .page-index
+
+    //- TODO
+    //- Language Navigation
+    //---------------------
+    //if ( languages.count > 1 )
+    //  +language-selector(languages)
+
+    .page-index__header
+
+      //- Hero
+      //------
+      .hero
+
+        .hero__content
+
+          //- Authors
+          //---------
+          .hero__author
+            +author-preview(info.author)
+
+          //- Title
+          //-------
+          h1.hero__title!= info.title
+
+          //- Subtitle
+          //----------
+          if info.subtitle
+            h2.hero__subtitle!= info.subtitle
+
+          .hero__details
+
+            //- Category
+            //----------
+            if info.categories
+
+              .hero__categories
+
+                each category, i in info.categories
+                  .hero__category!= category
+                  if !(i == info.categories.length - 1 )
+                    ="/"
+
+            //- TODO: add date
+            .hero__date Date...
+
+          //- Cover
+          //-------
+          if info.cover
+
+            .hero__cover
+              a.hero__cover-link(href=slides[0].url)
+                img.hero__cover-image(src=info.cover)
+
+          //- Description
+          //-------------
+          if info.description
+
+            .hero__description
+              .hero__description-content!= info.description
+
+          //- TODO: Create a mixin
+          //- Actions
+          //---------
+          .hero__actions
+
+            .intro-actions
+              .intro-actions__list
+
+                //- Start button
+                .intro-actions__item
+                  a.intro-actions__button.intro-actions__button--start(href=slides[0].url)
+                    .intro-actions__button-icon
+                    .intro-actions__button-label= translations.startPresentation
+
+                //- Demo button
+                if info.demo
+                  .intro-actions__item
+                    a.intro-actions__button.intro-actions__button--demo(href=info.demo)
+                      .intro-actions__button-icon
+                      .intro-actions__button-label= translations.demo
+
+                //- Material button
+                if info.material
+                  .intro-actions__item
+                    a.intro-actions__button.intro-actions__button--material(href=info.material)
+                      .intro-actions__button-icon
+                      .intro-actions__button-label= translations.material
+
+                //- Share button TODO
+                .intro-actions__item
+                  button.intro-actions__button.intro-actions__button--share
+                    .intro-actions__button-icon
+                    .intro-actions__button-label= translations.share
+    //- Contents
+    //----------
+    .page-index__table-contents
+
+      .page-index__table-contents-wrapper
+
+        //- Table of Contents
+        //-------------------
+        +table-contents(slides)
+
+    .page-index__footer
+
+      //- TODO: Create a mixin
+      footer.footer
+
+        .footer__wrapper
+          .footer__info
+            .footer__generator
+
+              = "Generated with "
+              a.footer__link(href="https://github.com/confetti-gen/confetti")
+                span.footer__linkLabel Confetti
+
+            .footer__author
+              ="Theme "
+              a.footer__link(href="https://github.com/andreamangano/confetti-theme-tangerine")
+                span.footer__linkLabel Tangerine
+              =" by "
+              a.footer__link(href="https://www.behance.net/tama")
+                span.footer__linkLabel Valeria Farina

@@ -1,0 +1,21 @@
+.page-index {
+   background-color: $color-primary;
+  min-height: 100vh;
+
+  &__header {
+
+  }
+  
+  &__table-contents {
+    padding: $baseline * 2.5 $column-gutter;
+  }
+
+  &__table-contents-wrapper {
+    max-width: $text-wrapper;
+    margin: 0 auto;
+  }
+
+  &__footer {
+    color: $color-neutral-lowest;
+  }
+}

@@ -1,0 +1,6 @@
+mixin slide-status(slide, nav)
+
+  .slide-status
+    .slide-status__content
+      .slide-status__title!= slide.title
+      .slide-status__progress <strong>#{nav.current}</strong> / #{nav.total}
