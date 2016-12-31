@@ -14,15 +14,12 @@ block slide
     //-------------
     h1.slide__title!= slide.title
 
-
     //- Slide picture
     //---------------
     .slide__img-wrapper
-
-      // img.slide__img(src="images/slides/"slide.picture)
+      img.slide__img(src=pathTo.images + cover)
 
     //- Slide description
     //-------------------
     if slide.description
-
       .slide__description!= slide.description
