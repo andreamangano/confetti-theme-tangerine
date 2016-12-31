@@ -5,8 +5,6 @@
   "author": "Andrea Mangano <andreaman87@gmail.com> (http://andreamangano.com)",
   "license": "ISC",
   "dependencies": {
-    "btoa": "^1.1.2",
-    "node-sass": "^3.10.1",
     "super-gigi": "^1.12.8"
   }
 }
