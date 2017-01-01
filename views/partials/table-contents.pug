@@ -10,15 +10,17 @@ mixin table-contents(slides)
 
         .table-contents__counter
           .table-contents__counter-icon
-            .icon-slides
+            include ../../assets/images/icons/slides.svg
           .table-contents__counter-label
             .table-contents__counter-number=slides.length
             =slidesTranslations
 
       .table-contents__actions
+        // TODO: change with radiobotton trick
         .table-contents__list-mode-button.is-active
+          include ../../assets/images/icons/listMode.svg
         .table-contents__preview-mode-button
-
+          include ../../assets/images/icons/previewMode.svg
 
     ul.table-contents__list
 

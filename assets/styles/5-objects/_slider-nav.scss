@@ -1,5 +1,6 @@
+//-----------
 // Slider Nav
-//------------------------------------------------------------------------------
+//-----------
 .slider-nav {
   background-color: $color-neutral-highest;
   color: $color-neutral-lowest;
@@ -36,8 +37,6 @@
       }
     }
 
-    &--overview {
-
-    }
+    &--overview {}
   }
 }

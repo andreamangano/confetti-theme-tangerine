@@ -1,5 +1,6 @@
+//----------------
 // Side Navigation
-//------------------------------------------------------------------------------
+//----------------
 .side-nav {
 
   &__content {
@@ -21,7 +22,6 @@
     align-items: center;
     padding: $baseline / 4 0;
     position: relative;
-    // border-top: 1px dotted $color-neutral-medium-low;
   }
 
   &__link {
@@ -47,7 +47,6 @@
     width: rem-calc(34);
     height: rem-calc(34);
     position: relative;
-    // transform: translateX(-50%) translateY(-50%);
 
     &::after {
       background-color: $color-primary;

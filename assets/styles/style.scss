@@ -1,67 +1,57 @@
-/*
-  1-SETTINGS
-*/
+//-----------
+// 1-SETTINGS
+//-----------
 @import './1-settings/palette';
 @import './1-settings/animations-vars';
 @import './1-settings/global';
 @import './1-settings/super-gigi-conf';
 
-/*
-  2-TOOLS
-*/
+//--------
+// 2-TOOLS
+//--------
 
 // Mixins
-
 @import './2-tools/mixins/gradient';
 @import './2-tools/mixins/hyphens';
 @import './2-tools/mixins/placeholder';
 @import './2-tools/mixins/visually-hidden';
-@import './2-tools/mixins/svg-embed';
 @import './2-tools/mixins/full-page-width';
 
 // Functions
-
 @import './2-tools/functions/z-index';
 @import './2-tools/functions/x-calc';
 
-/*
-  3-GENERIC
-*/
+//----------
+// 3-GENERIC
+//----------
 @import './3-generic/normalize';
 
-/*
-  4-BASE
-*/
+//-------
+// 4-BASE
+//-------
 @import './4-base/layout-vars';
 @import './4-base/body';
 @import './4-base/button';
 @import './4-base/fonts/hkgroteskpro';
 
-/*
-  5-OBJECT
-*/
+//---------
+// 5-OBJECT
+//---------
 
 // Placeholders
-
 @import './5-objects/placeholders/button';
 @import './5-objects/placeholders/typography';
 
 // Object
-
 @import './5-objects/hero';
-//@import './5-objects/slide';
-//@import './5-objects/slider';
-//@import './5-objects/slider-nav';
 @import './5-objects/table-contents';
 @import './5-objects/author-preview';
-//@import './5-objects/language-selector';
-//@import './5-objects/side-nav';
 @import './5-objects/footer';
 @import './5-objects/intro-actions';
 
-/*
-  7-PAGES
-*/
+//--------
+// 7-PAGES
+//--------
 @import './7-pages/index';
 @import './7-pages/slide';
 

@@ -36,20 +36,4 @@
     width: 1.4em;
     margin-right: $column-gutter / 2;
   }
-
-  &__button--start &__button-icon {
-    @include svg-embed(start, $color-primary);
-  }
-
-  &__button--demo &__button-icon {
-    @include svg-embed(demo, $color-neutral-medium);
-  }
-
-  &__button--material &__button-icon {
-    @include svg-embed(material, $color-neutral-medium);
-  }
-
-  &__button--share &__button-icon {
-    @include svg-embed(share, $color-neutral-medium);
-  }
 }

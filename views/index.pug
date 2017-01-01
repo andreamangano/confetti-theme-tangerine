@@ -1,21 +1,12 @@
 extends layout-base
 
 block page
-
   .page-index
-
-    //- TODO
-    //- Language Navigation
-    //---------------------
-    //if ( languages.count > 1 )
-    //  +language-selector(languages)
-
     .page-index__header
 
       //- Hero
       //------
       .hero
-
         .hero__content
 
           //- Authors
@@ -37,9 +28,7 @@ block page
             //- Category
             //----------
             if categories
-
               .hero__categories
-
                 each category, i in categories
                   .hero__category!= category
                   if !(i == categories.length - 1 )
@@ -51,7 +40,6 @@ block page
           //- Cover
           //-------
           if cover
-
             .hero__cover
               a.hero__cover-link(href=slides[0].url)
                 img.hero__cover-image(src=pathTo.covers + cover)
@@ -59,7 +47,6 @@ block page
           //- Description
           //-------------
           if description
-
             .hero__description
               .hero__description-content!= description
 
@@ -67,7 +54,6 @@ block page
           //- Actions
           //---------
           .hero__actions
-
             .intro-actions
               .intro-actions__list
 
@@ -75,6 +61,7 @@ block page
                 .intro-actions__item
                   a.intro-actions__button.intro-actions__button--start(href=slides[0].url)
                     .intro-actions__button-icon
+                      include ../assets/images/icons/start.svg
                     .intro-actions__button-label= translations.startPresentation
 
                 //- Demo button
@@ -82,6 +69,7 @@ block page
                   .intro-actions__item
                     a.intro-actions__button.intro-actions__button--demo(href=demo)
                       .intro-actions__button-icon
+                        include ../assets/images/icons/demo.svg
                       .intro-actions__button-label= translations.demo
 
                 //- Material button
@@ -89,17 +77,18 @@ block page
                   .intro-actions__item
                     a.intro-actions__button.intro-actions__button--material(href=material)
                       .intro-actions__button-icon
+                        include ../assets/images/icons/material.svg
                       .intro-actions__button-label= translations.material
 
                 //- Share button TODO
                 .intro-actions__item
                   button.intro-actions__button.intro-actions__button--share
                     .intro-actions__button-icon
+                      include ../assets/images/icons/share.svg
                     .intro-actions__button-label= translations.share
     //- Contents
     //----------
     .page-index__table-contents
-
       .page-index__table-contents-wrapper
 
         //- Table of Contents

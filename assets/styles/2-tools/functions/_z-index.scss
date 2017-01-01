@@ -3,6 +3,5 @@
     @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
     @warn $z-layers;
   }
-
   @return map-get($z-layers, $layer);
 }

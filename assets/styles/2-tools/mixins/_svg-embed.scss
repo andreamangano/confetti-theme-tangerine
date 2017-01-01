@@ -1,4 +1,0 @@
-@mixin svg-embed($symbol, $color: '') {
-  background-image: url('data:image/svg+xml;base64,#{svg64($symbol, $color)}');
-  background-size: cover;
-}

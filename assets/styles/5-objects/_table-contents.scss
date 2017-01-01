@@ -1,4 +1,6 @@
-// Table of contents
+//------------------
+// TABLE OF CONTENTS
+//------------------
 .table-contents {
 
   &__header {
@@ -24,7 +26,6 @@
   }
 
   &__counter-icon {
-    @include svg-embed(slides, $color-neutral-lowest);
     height: 1em;
     width: 1em;
   }
@@ -46,13 +47,9 @@
     }
   }
 
-  &__list-mode-button {
-    @include svg-embed(listMode, $color-neutral-lowest);
-  }
+  &__list-mode-button {}
 
-  &__preview-mode-button {
-    @include svg-embed(previewMode, $color-neutral-lowest);
-  }
+  &__preview-mode-button {}
 
   &__counter-label {
     margin-left: rem-calc(4);
